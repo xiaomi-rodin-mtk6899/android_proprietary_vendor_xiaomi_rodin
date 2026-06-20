@@ -466,6 +466,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/init.panel_info.sh:$(TARGET_COPY_OUT_ODM)/etc/init.panel_info.sh \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/display.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc \
+    vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc \
+    vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hw.touchfeature-service.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.sensor.citsensorservice.aidl.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/o10_36_02_0b_dsc_vdo_cust_silky_brightness.xml:$(TARGET_COPY_OUT_ODM)/etc/o10_36_02_0b_dsc_vdo_cust_silky_brightness.xml \
@@ -761,6 +763,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.thermal_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal_core.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/init/libxiaomi_mtkril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libxiaomi_mtkril.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/miteelog.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/miteelog.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtk_agpsd_p.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_agpsd_p.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/mtk_gnss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/mtk_gnss.rc \
@@ -1056,11 +1059,6 @@ PRODUCT_PACKAGES += \
     c2.dolby.store \
     com.xiaomi.camdfx \
     com.xiaomi.immunesystem.bigdata2 \
-    libGLES_meow \
-    libMEOW_data \
-    libMEOW_gift \
-    libMEOW_qt \
-    libMEOW_trace \
     libGLES_mali \
     android.hardware.audio.effect.aidl-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
@@ -1144,6 +1142,7 @@ PRODUCT_PACKAGES += \
     libbaa_FreqChgFvDown \
     libbaa_LowSohFvDown \
     libbaa_common \
+    libbase-v35 \
     libbessound_hd_mtk_vendor \
     libblisrc32_vendor \
     libbluetooth_audio_session_aidl_mtk \
@@ -1236,11 +1235,15 @@ PRODUCT_PACKAGES += \
     libgralloctypes_mtk \
     libgwsdv2-ril \
     libgwsdv3-ril \
+    libgz_gp_client \
+    libgz_uree \
+    libheichal \
     libhfmanager \
     libhfmanagerwrapper \
     libhidparser \
     libhwm \
     libifcutils_mtk \
+    libimagebuffer_wrapper \
     libimgstream_sync \
     libimgsys_osal \
     libion_mtk \
@@ -1300,6 +1303,8 @@ PRODUCT_PACKAGES += \
     libmtkgpuserv \
     libmtkgpuservsdk_vendor \
     libmtkhardware_legacy \
+    libmtkisp_metadata_v2 \
+    libmtkisp_metadata_v3 \
     libmtklimiter_vendor \
     libmtkmipc-ril \
     libmtknetcap \
@@ -1410,6 +1415,7 @@ PRODUCT_PACKAGES += \
     libvpu5 \
     libwpfa \
     libwvkeybox \
+    libxiaomi_mtkril \
     libxlog \
     arm.graphics-V5-ndk \
     arm.mali.platform-V2-ndk \
@@ -1910,6 +1916,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.camera.synthetic-V1-ndk \
     vendor.xiaomi.hardware.camera.synthetic-impl \
     vendor.xiaomi.hardware.fx.tunnel-V1-ndk \
+    vendor.xiaomi.hardware.mfidoca-V1-ndk \
     vendor.xiaomi.hardware.misys.core-V1-ndk \
     vendor.xiaomi.hardware.mlipay-V1-ndk \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
@@ -2057,6 +2064,7 @@ PRODUCT_PACKAGES += \
     libMiDispDevManager \
     libMiEmojiEffect \
     libMiPhotoFilter \
+    libadaptivehdr \
     libalCFR \
     libanc_dc_base \
     libanc_single_bokeh \
@@ -2074,6 +2082,7 @@ PRODUCT_PACKAGES += \
     libarcsoft_turbo_fusion_raw_super_night \
     libarcsoft_turbo_hdr_detection \
     libarcsoft_turbo_sr_detection \
+    libbarrage \
     libc++_shared \
     libcamera_scene \
     libcameraheif \
@@ -2082,10 +2091,15 @@ PRODUCT_PACKAGES += \
     libdeflicker \
     libdisplaylog \
     libdither \
+    libeyecare \
+    libfcmintf \
     libflatmode \
+    libframecapturemanager \
+    libgf_hal \
     libhandgesture.arcsoft \
     libhis_motion_tracker \
     libhistprocess \
+    libmfido_mitee \
     libmiBrightness \
     libmiSAT \
     libmiSensorCtrl \
@@ -2177,6 +2191,8 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.displayfeature_aidl-service.xml \
     vendor.xiaomi.hardware.dynamiccameraserver.xml \
     manifest_vendor.xiaomi.hardware.aidl.mtdservice.xml \
+    manifest_vendor.xiaomi.hardware.mfidoca.xml \
+    manifest_vendor.xiaomi.hardware.mlipay.xml \
     vendor.xiaomi.hw.touchfeature-service.xml \
     vendor.xiaomi.sensor.citsensorservice.aidl.xml \
     batterysecret \
@@ -2238,8 +2254,10 @@ PRODUCT_PACKAGES += \
     spkcal_si_p12a \
     spkcal_tfa98xx \
     vtservice \
+    fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
+    mlipayd_mitee \
     mtd_mitee \
     touch_report_debug \
     toucheventcheck
