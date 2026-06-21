@@ -632,7 +632,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libutilscallstack",
-                "libalsautils",
+                "libalsautils-mtk",
                 "libhardware_legacy",
                 "libhardware",
                 "libaudioutils",
@@ -2147,6 +2147,34 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libalsautils-mtk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libalsautils-mtk.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libtinyalsa",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -30521,6 +30549,33 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtfa98xx_cal",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/lib64/libtfa98xx_cal.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libtinyalsa",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtflite_mtk.mtk",
     owner: "xiaomi",
     strip: {
@@ -37761,6 +37816,33 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "climax_tfa9873",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/climax_tfa9873",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "android.hardware.audio.parameter_parser.service",
     owner: "xiaomi",
     target: {
@@ -37793,12 +37875,208 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
+    name: "spkcal",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libcutils",
+                "libutils",
+                "libandroid_runtime",
+                "libnativehelper",
+                "libaudioclient",
+                "libmediandk",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libtinyalsa",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "spkcal_88263s",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal_88263s",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libcutils",
+                "libaudioclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "spkcal_88263s_m16",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal_88263s_m16",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libcutils",
+                "libaudioclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "spkcal_88263s_m9",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
                 "proprietary/system_ext/bin/spkcal_88263s_m9",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libcutils",
+                "libaudioclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "spkcal_88263s_n12",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal_88263s_n12",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libcutils",
+                "libaudioclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "spkcal_88263s_n12a",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal_88263s_n12a",
+            ],
+            shared_libs: [
+                "libstagefright",
+                "liblog",
+                "libutils",
+                "libbinder",
+                "libstagefright_foundation",
+                "libmedia",
+                "libcutils",
+                "libaudioclient",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "spkcal_88263s_o10",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/spkcal_88263s_o10",
             ],
             shared_libs: [
                 "libstagefright",
@@ -37858,74 +38136,12 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "spkcal_si_o12u",
+    name: "spkcal_tfa",
     owner: "xiaomi",
     target: {
         android_arm64: {
             srcs: [
-                "proprietary/system_ext/bin/spkcal_si_o12u",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libaudioclient",
-                "libbinder",
-                "libstagefright_foundation",
-                "libmedia",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "spkcal_si_p12a",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/spkcal_si_p12a",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libaudioclient",
-                "libbinder",
-                "libstagefright_foundation",
-                "libmedia",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "spkcal_tfa98xx",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/spkcal_tfa98xx",
+                "proprietary/system_ext/bin/spkcal_tfa",
             ],
             shared_libs: [
                 "libstagefright",
@@ -37935,6 +38151,7 @@ cc_prebuilt_binary {
                 "libstagefright_foundation",
                 "libmedia",
                 "libcutils",
+                "libtfa98xx_cal",
                 "libaudioclient",
                 "libc++",
                 "libc",
