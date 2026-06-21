@@ -16,3 +16,5 @@ service vendor.audio-hal-aidl /vendor/bin/hw/android.hardware.audio.service-aidl
     socket audio_hw_socket seqpacket 0666 system system
     #END
     onrestart restart audioserver
+    onrestart restart vendor.sensors-hal-multihal
+    onrestart restart citsensorservice
