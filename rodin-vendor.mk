@@ -466,6 +466,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/init.panel_info.sh:$(TARGET_COPY_OUT_ODM)/etc/init.panel_info.sh \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/display.rc:$(TARGET_COPY_OUT_ODM)/etc/init/display.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.aidl.mtdservice-miteeservice.rc \
+    vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.aidl.tidaservice-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.aidl.tidaservice-miteeservice.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mfidoca-miteeservice.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hardware.mlipay-miteeservice.rc \
     vendor/xiaomi/rodin/proprietary/odm/etc/init/vendor.xiaomi.hw.touchfeature-service.rc:$(TARGET_COPY_OUT_ODM)/etc/init/vendor.xiaomi.hw.touchfeature-service.rc \
@@ -478,6 +479,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/rcv_pink.wav:$(TARGET_COPY_OUT_ODM)/etc/rcv_pink.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorCali.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorCali.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorConfig.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorConfig.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/sensors/lightSensorConfigSec.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/lightSensorConfigSec.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/sensors/ois_params_data.json:$(TARGET_COPY_OUT_ODM)/etc/sensors/ois_params_data.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/spk.wav:$(TARGET_COPY_OUT_ODM)/etc/spk.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/spk_cal_silence.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_cal_silence.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/spk_cal_sweep.wav:$(TARGET_COPY_OUT_ODM)/etc/spk_cal_sweep.wav \
@@ -542,6 +545,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/MNL_Config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/MNL_Config.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/TL_settings.json:$(TARGET_COPY_OUT_VENDOR)/etc/TL_settings.json \
     vendor/xiaomi/rodin/proprietary/vendor/etc/VideoLog_dynamic.ds:$(TARGET_COPY_OUT_VENDOR)/etc/VideoLog_dynamic.ds \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/apdb/APDB_MT6899___W2439:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6899___W2439 \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/apdb/APDB_MT6899___W2439_ENUM:$(TARGET_COPY_OUT_VENDOR)/etc/apdb/APDB_MT6899___W2439_ENUM \
     vendor/xiaomi/rodin/proprietary/vendor/etc/audio_device.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/audio_device_fs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_device_fs.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/audio_param/AudioParamOptions_mgvi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_param/AudioParamOptions_mgvi.xml \
@@ -885,6 +890,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt \
     vendor/xiaomi/rodin/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-extended-seccomp-policy \
     vendor/xiaomi/rodin/proprietary/vendor/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/android.hardware.media.c2@1.2-mediatek-seccomp-policy \
+    vendor/xiaomi/rodin/proprietary/vendor/etc/sensor_diag.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/sensor_diag.cfg \
     vendor/xiaomi/rodin/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/slp_conf:$(TARGET_COPY_OUT_VENDOR)/etc/slp_conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/smartpa_param/AW_DSP.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param/AW_DSP.bin \
@@ -1078,6 +1084,7 @@ PRODUCT_PACKAGES += \
     vulkan.mali \
     mtkflp.default \
     mtkgeofence.default \
+    sensors.dynamic_sensor_hal \
     sensors.elliptic@2.0 \
     sensors.mediatek.V2.0 \
     sound_trigger.primary.default \
@@ -1111,6 +1118,7 @@ PRODUCT_PACKAGES += \
     libaal_sec \
     libaedv \
     libaispq \
+    libalsautils-mtk \
     libapmonitor_vendor \
     libappgamepq \
     libapu_mdw \
@@ -1902,6 +1910,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq_aidl-V7-ndk \
     vendor.mediatek.hardware.videotelephony-V1-ndk_vendor \
     vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk \
+    vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk \
     vendor.xiaomi.hardware.aidlbgservice-V1-impl \
     vendor.xiaomi.hardware.aidlbgservice-V1-ndk \
     vendor.xiaomi.hardware.aon-V1-ndk \
@@ -2132,6 +2141,7 @@ PRODUCT_PACKAGES += \
     libsdr2hdr \
     libsre \
     libtensorflowlite_touch_c \
+    libtida_mitee \
     libtouchreport \
     libtouchreport_alg_fts \
     libtouchreport_alg_goodix \
@@ -2193,6 +2203,7 @@ PRODUCT_PACKAGES += \
     manifest_vendor.xiaomi.hardware.aidl.mtdservice.xml \
     manifest_vendor.xiaomi.hardware.mfidoca.xml \
     manifest_vendor.xiaomi.hardware.mlipay.xml \
+    manifest_vendor.xiaomi.hardware.tidaservice.xml \
     vendor.xiaomi.hw.touchfeature-service.xml \
     vendor.xiaomi.sensor.citsensorservice.aidl.xml \
     batterysecret \
@@ -2259,6 +2270,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.sensor.citsensorservice.aidl \
     mlipayd_mitee \
     mtd_mitee \
+    tidad_mitee \
     touch_report_debug \
     toucheventcheck
 

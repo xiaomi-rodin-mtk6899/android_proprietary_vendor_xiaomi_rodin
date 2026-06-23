@@ -632,7 +632,7 @@ cc_prebuilt_library_shared {
                 "libcutils",
                 "libutils",
                 "libutilscallstack",
-                "libalsautils",
+                "libalsautils-mtk",
                 "libhardware_legacy",
                 "libhardware",
                 "libaudioutils",
@@ -1179,6 +1179,42 @@ cc_prebuilt_library_shared {
                 "liblog",
                 "libcutils",
                 "libhardware",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    relative_install_path: "hw",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "sensors.dynamic_sensor_hal",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/hw/sensors.dynamic_sensor_hal.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libhidparser",
+                "server_configurable_flags",
+                "libaconfig_storage_read_api_cc",
+                "android.hardware.sensors@2.0",
+                "android.hardware.sensors@2.0-ScopedWakelock",
+                "android.hardware.sensors@2.1",
+                "libhidlbase",
+                "libcutils",
+                "liblog",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -2147,6 +2183,34 @@ cc_prebuilt_library_shared {
                 "libdl",
                 "libc",
                 "libm",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libalsautils-mtk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libalsautils-mtk.so",
+            ],
+            shared_libs: [
+                "libaudioutils",
+                "libcutils",
+                "liblog",
+                "libtinyalsa",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
             ],
         },
     },
@@ -28106,6 +28170,31 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "vendor.xiaomi.hardware.aidlbgservice-V1-impl",
     owner: "xiaomi",
     strip: {
@@ -35280,6 +35369,40 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libtida_mitee",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/lib64/libtida_mitee.so",
+            ],
+            shared_libs: [
+                "vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk",
+                "vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk",
+                "libbase",
+                "libcrypto",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder_ndk",
+                "libmisight",
+                "libteecli",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libtouchreport",
     owner: "xiaomi",
     strip: {
@@ -36024,6 +36147,15 @@ prebuilt_etc_xml {
     name: "manifest_vendor.xiaomi.hardware.mlipay.xml",
     owner: "xiaomi",
     src: "proprietary/odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    device_specific: true,
+}
+
+prebuilt_etc_xml {
+    name: "manifest_vendor.xiaomi.hardware.tidaservice.xml",
+    owner: "xiaomi",
+    src: "proprietary/odm/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.tidaservice.xml",
     filename_from_src: true,
     sub_dir: "vintf/manifest",
     device_specific: true,
@@ -38150,6 +38282,40 @@ cc_prebuilt_binary {
                 "vendor.xiaomi.hardware.mfidoca-V1-ndk",
                 "libteecli",
                 "libmt_mitee",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    device_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "tidad_mitee",
+    owner: "xiaomi",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/odm/bin/tidad_mitee",
+            ],
+            shared_libs: [
+                "vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk",
+                "vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk",
+                "libbase",
+                "libcrypto",
+                "libcutils",
+                "liblog",
+                "libutils",
+                "libbinder_ndk",
+                "libmisight",
+                "libtida_mitee",
                 "libc++",
                 "libc",
                 "libm",
