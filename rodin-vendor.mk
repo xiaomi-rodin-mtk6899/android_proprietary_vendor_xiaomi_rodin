@@ -526,8 +526,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta:$(TARGET_COPY_OUT_ODM)/mitee/ta/a3ba6512-6e0e-4065-93165e4a7d04ca08.ta \
     vendor/xiaomi/rodin/proprietary/system/etc/public.libraries-mtk.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-mtk.txt \
     vendor/xiaomi/rodin/proprietary/system_ext/etc/init/android.hardware.audio.parameter_parser.service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/android.hardware.audio.parameter_parser.service.rc \
-    vendor/xiaomi/rodin/proprietary/system_ext/etc/init/init.vtservice.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/init.vtservice.rc \
-    vendor/xiaomi/rodin/proprietary/system_ext/etc/sysconfig/com.mediatek.ims.config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/com.mediatek.ims.config.xml \
     vendor/xiaomi/rodin/proprietary/vendor/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db:$(TARGET_COPY_OUT_VENDOR)/bin/crossbuild/DataSet/SQLiteModule/db/port_select.db \
     vendor/xiaomi/rodin/proprietary/vendor/data/model/VEdynamic.dla:$(TARGET_COPY_OUT_VENDOR)/data/model/VEdynamic.dla \
     vendor/xiaomi/rodin/proprietary/vendor/data/model/mt6899_mc_1088x1920.dla:$(TARGET_COPY_OUT_VENDOR)/data/model/mt6899_mc_1088x1920.dla \
@@ -1909,7 +1907,7 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.pq_aidl-V2-ndk \
     vendor.mediatek.hardware.pq_aidl-V4-ndk \
     vendor.mediatek.hardware.pq_aidl-V7-ndk \
-    vendor.mediatek.hardware.videotelephony-V1-ndk_vendor \
+    vendor.mediatek.hardware.videotelephony-V1-ndk \
     vendor.xiaomi.hardware.aidl.mtdservice-V1-ndk \
     vendor.xiaomi.hardware.aidl.tidaservice-V1-ndk \
     vendor.xiaomi.hardware.aidlbgservice-V1-impl \
@@ -1944,13 +1942,6 @@ PRODUCT_PACKAGES += \
     libapuwarexrp_v2.mtk \
     libarmnn_ndk.mtk \
     libcmdl_ndk.mtk \
-    libcomutils \
-    libimsma \
-    libimsma_adapt \
-    libimsma_rtp \
-    libimsma_socketwrapper \
-    libmtk_vt_service \
-    libmtk_vt_wrapper \
     libmvpu_cic_ci_compiler.mtk \
     libmvpu_cic_ci_compiler_25.mtk \
     libmvpu_cic_ci_compiler_30.mtk \
@@ -1992,13 +1983,7 @@ PRODUCT_PACKAGES += \
     libneuronusdk_adapter.9.mtk \
     libneuronusdk_adapter.mtk \
     libnir_neon_driver_ndk.mtk \
-    libsignal \
-    libsink-mtk \
-    libsource \
     libtflite_mtk.mtk \
-    libvcodec_cap \
-    libvcodec_capenc \
-    libvt_avsync \
     vendor.mediatek.hardware.apuware.aiste-V1-ndk \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk \
     vendor.mediatek.hardware.apuware.apusys@1.0 \
@@ -2012,8 +1997,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.xrp@1.0 \
     vendor.mediatek.hardware.apuware.xrp@2.0 \
     vendor.mediatek.hardware.neuropilot.neuronservice-V1-ndk \
-    vendor.mediatek.hardware.videotelephony-V1-ndk \
-    vendor.mediatek.hardware.videotelephony@1.0 \
     anc.hal \
     com.xiaomi.plugin.arcrawhdr \
     com.xiaomi.plugin.arcsoftsr \
@@ -2157,17 +2140,8 @@ PRODUCT_PACKAGES += \
     CameraExtensionsProxy \
     JVFactoryTest \
     goodix_sz_rodin \
-    ImsService \
-    MtkGbaService \
-    MtkTelephonyAssist \
     camerax-vendor-extensions \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common \
     androidx.camera.extensions.impl \
-    mediatek-ims-extension-plugin \
     android.hardware.audio.effect.service-aidl.xml \
     android.hardware.audio.service-aidl.mediatek.xml \
     android.hardware.gatekeeper-service.mitee.xml \
@@ -2263,7 +2237,6 @@ PRODUCT_PACKAGES += \
     spkcal_88263s_m9 \
     spkcal_p10 \
     spkcal_tfa98xx \
-    vtservice \
     fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
@@ -2742,9 +2715,4 @@ PRODUCT_PACKAGES += \
     vendor_lib64_rodinsc820csultra_mipi_raw_tuning_so
 
 PRODUCT_BOOT_JARS += \
-    camerax-vendor-extensions \
-    mediatek-ims-base \
-    mediatek-ims-common \
-    mediatek-telecom-common \
-    mediatek-telephony-base \
-    mediatek-telephony-common
+    camerax-vendor-extensions
