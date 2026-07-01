@@ -4047,6 +4047,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_aidl_prebuilt.so",
             ],
             shared_libs: [
+                "libcodec2_shim_blockpool",
                 "server_configurable_flags",
                 "libaconfig_storage_read_api_cc",
                 "android.hardware.common-V2-ndk",
@@ -6675,6 +6676,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libkeymint_remote_prov_support_V3.so",
             ],
             shared_libs: [
+                "libkeymint_shim_cosesign1",
                 "android.hardware.security.keymint-V3-ndk",
                 "libbase-v35",
                 "libbinder_ndk",
@@ -38007,68 +38009,6 @@ cc_prebuilt_binary {
                 "libcutils",
                 "libaudioclient",
                 "libtinyalsa",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "spkcal_si_o12u",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/spkcal_si_o12u",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libaudioclient",
-                "libbinder",
-                "libstagefright_foundation",
-                "libmedia",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    system_ext_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "spkcal_si_p12a",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/system_ext/bin/spkcal_si_p12a",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libaudioclient",
-                "libbinder",
-                "libstagefright_foundation",
-                "libmedia",
                 "libc++",
                 "libc",
                 "libm",

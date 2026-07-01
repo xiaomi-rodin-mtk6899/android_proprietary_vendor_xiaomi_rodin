@@ -2262,8 +2262,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.parameter_parser.service \
     spkcal_88263s_m9 \
     spkcal_p10 \
-    spkcal_si_o12u \
-    spkcal_si_p12a \
     spkcal_tfa98xx \
     vtservice \
     fidoca_mitee \
