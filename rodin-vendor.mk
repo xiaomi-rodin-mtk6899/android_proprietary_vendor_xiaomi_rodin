@@ -1057,6 +1057,7 @@ PRODUCT_PACKAGES += \
     av-audio-types-aidl-V3-ndk \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
+    android.frameworks.displayservice@1.0 \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
     c2.dolby.client \
@@ -1232,7 +1233,7 @@ PRODUCT_PACKAGES += \
     libfgauge_gm30 \
     libfile_op \
     libforkexecwrap \
-    libformatter \
+    libformatter_mtk \
     libfsmsmartpaparse \
     libfvaudio \
     libged \
@@ -1287,6 +1288,7 @@ PRODUCT_PACKAGES += \
     libmispowerop \
     libmmprofile \
     libmnetlink_v104 \
+    libmnl_mtk \
     libmsbc_mtk \
     libmtk-fusion-ril-prop-vsim \
     libmtk-ril \
@@ -1653,7 +1655,6 @@ PRODUCT_PACKAGES += \
     libmmagent \
     libmml \
     libmmlpqImpl \
-    libmnl \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \
     libmtkcam.eventcallback \
@@ -2565,7 +2566,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libmmagent_so \
     vendor_lib64_libmml_so \
     vendor_lib64_libmmlpqImpl_so \
-    vendor_lib64_libmnl_so \
     odm_lib64_temp_mt6899_libmtkcam_atmseventmgr_so \
     odm_lib64_temp_libmtkcam_atmseventmgr_so \
     vendor_lib64_libmtkcam_atmseventmgr_so \
