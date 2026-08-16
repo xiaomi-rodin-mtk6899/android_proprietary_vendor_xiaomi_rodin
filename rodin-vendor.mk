@@ -398,6 +398,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/odm/etc/camera/xiaomiSceneDetection.xml:$(TARGET_COPY_OUT_ODM)/etc/camera/xiaomiSceneDetection.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/charger/BAA_config_common.json:$(TARGET_COPY_OUT_ODM)/etc/charger/BAA_config_common.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/charger/BAA_config_rodin.json:$(TARGET_COPY_OUT_ODM)/etc/charger/BAA_config_rodin.json \
+    vendor/xiaomi/rodin/proprietary/odm/etc/cit_param_config.json:$(TARGET_COPY_OUT_ODM)/etc/cit_param_config.json \
     vendor/xiaomi/rodin/proprietary/odm/etc/coverVibrationTest.wav:$(TARGET_COPY_OUT_ODM)/etc/coverVibrationTest.wav \
     vendor/xiaomi/rodin/proprietary/odm/etc/cust_color.xml:$(TARGET_COPY_OUT_ODM)/etc/cust_color.xml \
     vendor/xiaomi/rodin/proprietary/odm/etc/df_default.xml:$(TARGET_COPY_OUT_ODM)/etc/df_default.xml \
@@ -1064,6 +1065,11 @@ PRODUCT_PACKAGES += \
     c2.dolby.store \
     com.xiaomi.camdfx \
     com.xiaomi.immunesystem.bigdata2 \
+    libGLES_meow \
+    libMEOW_data \
+    libMEOW_gift \
+    libMEOW_qt \
+    libMEOW_trace \
     libGLES_mali \
     android.hardware.audio.effect.aidl-impl-mediatek \
     android.hardware.gnss-impl-mediatek \
@@ -1100,10 +1106,13 @@ PRODUCT_PACKAGES += \
     lib3a.custom.shading.flow \
     libAF \
     libBasicModule \
+    libDefaultFpsActor \
+    libFrameRecord \
     libJpgEncPipe \
     libMiMotion \
     libMtkSpeechEnh \
     libMtkSpeechEnh_swb \
+    libNoFpsActor \
     libOpenCL \
     libSQLiteModule_VER_ALL \
     libXMFaceFocus \
@@ -1983,6 +1992,7 @@ PRODUCT_PACKAGES += \
     libneuronusdk_adapter.9.mtk \
     libneuronusdk_adapter.mtk \
     libnir_neon_driver_ndk.mtk \
+    libtfa98xx_cal \
     libtflite_mtk.mtk \
     vendor.mediatek.hardware.apuware.aiste-V1-ndk \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk \
@@ -2138,6 +2148,7 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mediaeventgatherservice-V1-ndk \
     com.google.android.widevine.nonupdatable \
     CameraExtensionsProxy \
+    MiuiCit \
     JVFactoryTest \
     goodix_sz_rodin \
     camerax-vendor-extensions \
@@ -2233,10 +2244,16 @@ PRODUCT_PACKAGES += \
     thermal_core \
     volte_clientapi_ua \
     wlan_assistant \
+    climax_tfa9873 \
     android.hardware.audio.parameter_parser.service \
+    spkcal \
+    spkcal_88263s \
+    spkcal_88263s_m16 \
     spkcal_88263s_m9 \
-    spkcal_p10 \
-    spkcal_tfa98xx \
+    spkcal_88263s_n12 \
+    spkcal_88263s_n12a \
+    spkcal_88263s_o10 \
+    spkcal_tfa \
     fidoca_mitee \
     vendor.xiaomi.hw.touchfeature-service \
     vendor.xiaomi.sensor.citsensorservice.aidl \
