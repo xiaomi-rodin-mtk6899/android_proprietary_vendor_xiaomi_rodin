@@ -37677,6 +37677,7 @@ cc_prebuilt_binary {
                 "proprietary/system_ext/bin/spkcal",
             ],
             shared_libs: [
+                "libaudiobase",
                 "libstagefright",
                 "liblog",
                 "libcutils",
@@ -37905,6 +37906,7 @@ cc_prebuilt_binary {
                 "proprietary/system_ext/bin/spkcal_tfa",
             ],
             shared_libs: [
+                "libaudiobase",
                 "libstagefright",
                 "liblog",
                 "libutils",
