@@ -4276,7 +4276,6 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_aidl_prebuilt.so",
             ],
             shared_libs: [
-                "libcodec2_shim_blockpool",
                 "server_configurable_flags",
                 "libaconfig_storage_read_api_cc",
                 "android.hardware.common-V2-ndk",
@@ -4285,8 +4284,8 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libbinder_ndk",
                 "libcodec2",
-                "libcodec2_hal_common",
-                "libcodec2_vndk",
+                "libcodec2_hal_common_prebuilt",
+                "libcodec2_vndk_prebuilt",
                 "libcutils",
                 "libhidlbase",
                 "liblog",
@@ -4295,7 +4294,7 @@ cc_prebuilt_library_shared {
                 "libstagefright_bufferpool@2.0.1",
                 "libui",
                 "libutils",
-                "libcodec2_hidl_plugin",
+                "libcodec2_hidl_plugin_prebuilt",
                 "libc++",
                 "libc",
                 "libm",
@@ -4341,6 +4340,66 @@ cc_prebuilt_library_shared {
                 "libui",
                 "libsync",
                 "libgralloc_extra",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hal_common_prebuilt",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_hal_common_prebuilt.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcodec2",
+                "libcodec2_vndk",
+                "liblog",
+                "libstagefright_foundation",
+                "server_configurable_flags",
+                "libaconfig_storage_read_api_cc",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hidl_plugin_prebuilt",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_hidl_plugin_prebuilt.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcodec2",
+                "libcodec2_vndk_prebuilt",
+                "liblog",
+                "libutils",
                 "libc++",
                 "libc",
                 "libm",
@@ -4622,6 +4681,54 @@ cc_prebuilt_library_shared {
                 "libcodec2",
                 "libcodec2_hal_common",
                 "libcodec2_vndk",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_vndk_prebuilt",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libcodec2_vndk_prebuilt.so",
+            ],
+            shared_libs: [
+                "server_configurable_flags",
+                "libaconfig_storage_read_api_cc",
+                "android.hardware.graphics.bufferqueue@2.0",
+                "android.hardware.graphics.common@1.2",
+                "android.hardware.common-V2-ndk",
+                "android.hardware.common.fmq-V1-ndk",
+                "android.hardware.media.bufferpool@2.0",
+                "android.hardware.media.bufferpool2-V2-ndk",
+                "android.hardware.media.c2-V1-ndk",
+                "libbase",
+                "libbinder_ndk",
+                "libcutils",
+                "libdmabufheap",
+                "libfmq",
+                "libgralloctypes",
+                "libhidlbase",
+                "libion",
+                "liblog",
+                "libnativewindow",
+                "libstagefright_foundation",
+                "libstagefright_bufferpool@2.0.1",
+                "libstagefright_aidl_bufferpool2",
+                "libui",
                 "libutils",
                 "libc++",
                 "libc",

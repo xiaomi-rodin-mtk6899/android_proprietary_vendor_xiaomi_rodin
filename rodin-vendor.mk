@@ -1191,12 +1191,15 @@ PRODUCT_PACKAGES += \
     libcmdl_ndk.mtk.vndk \
     libcodec2_aidl_prebuilt \
     libcodec2_fsr \
+    libcodec2_hal_common_prebuilt \
+    libcodec2_hidl_plugin_prebuilt \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
     libcodec2_soft_ac4dec \
     libcodec2_soft_ddpdec \
     libcodec2_store_dolby \
+    libcodec2_vndk_prebuilt \
     libcodec2_vpp_AIMEMC_plugin \
     libcodec2_vpp_AISR_plugin \
     libcodec2_vpp_fa_plugin \
