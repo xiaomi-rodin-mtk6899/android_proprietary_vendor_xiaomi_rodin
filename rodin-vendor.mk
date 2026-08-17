@@ -1059,6 +1059,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
+    android.hardware.security.keymint-V3-ndk-v35 \
     c2.dolby.client \
     c2.dolby.hevc.dec \
     c2.dolby.hevc.sec.dec \
@@ -1224,6 +1225,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.signaltrigger \
     libcomposer_ext \
     libconnfem \
+    libcppcose_rkp-v35 \
     libcustom_nvram \
     libcvsd_mtk \
     libdapparamstorage \
