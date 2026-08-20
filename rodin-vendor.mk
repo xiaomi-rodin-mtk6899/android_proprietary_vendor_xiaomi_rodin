@@ -1033,6 +1033,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/firmware/v1_fac_fld_coef.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/v1_fac_fld_coef.bin \
     vendor/xiaomi/rodin/proprietary/vendor/firmware/v1_fac_fld_config.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/v1_fac_fld_config.bin \
     vendor/xiaomi/rodin/proprietary/vendor/firmware/wifi.cfg:$(TARGET_COPY_OUT_VENDOR)/firmware/wifi.cfg \
+    vendor/xiaomi/rodin/proprietary/vendor/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
     vendor/xiaomi/rodin/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf \
     vendor/xiaomi/rodin/proprietary/vendor/mitee/ta/14b0aad8-c011-4a3f-b66aca8d0e66f273.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/14b0aad8-c011-4a3f-b66aca8d0e66f273.ta \
     vendor/xiaomi/rodin/proprietary/vendor/mitee/ta/2e8fade5-0c7a-46cc-810e6468baee66b9.ta:$(TARGET_COPY_OUT_VENDOR)/mitee/ta/2e8fade5-0c7a-46cc-810e6468baee66b9.ta \
@@ -1406,6 +1407,7 @@ PRODUCT_PACKAGES += \
     libspatializerparamstorage \
     libspeech_enh_lib \
     libspeechparser_vendor \
+    libstagefright_foundation-v35 \
     libstorage_otp \
     libswtcc \
     libsysenv \
@@ -1413,6 +1415,7 @@ PRODUCT_PACKAGES += \
     libtflite_mtk_vendor \
     libtrm \
     libudf \
+    libui-v35 \
     libultrahdr_mtk \
     libultrahdr_rodin \
     libvia-ril \
