@@ -4302,6 +4302,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_aidl_prebuilt.so",
             ],
             shared_libs: [
+                "libcodec2_shim_blockpool",
                 "server_configurable_flags",
                 "libaconfig_storage_read_api_cc",
                 "android.hardware.common-V2-ndk",
@@ -4421,6 +4422,7 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libcodec2_hidl_plugin_prebuilt.so",
             ],
             shared_libs: [
+                "libcodec2_shim_blockpool",
                 "libbase",
                 "libcodec2",
                 "libcodec2_vndk_prebuilt",
