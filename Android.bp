@@ -190,6 +190,32 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "android.hardware.security.keymint-V3-ndk-v36",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/android.hardware.security.keymint-V3-ndk-v36.so",
+            ],
+            shared_libs: [
+                "libbinder_ndk",
+                "android.hardware.security.secureclock-V1-ndk",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "c2.dolby.client",
     owner: "xiaomi",
     strip: {
@@ -36534,7 +36560,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/hw/android.hardware.security.keymint@3.0-service.mitee",
             ],
             shared_libs: [
-                "android.hardware.security.keymint-V3-ndk",
+                "android.hardware.security.keymint-V3-ndk-v36",
                 "libteecli",
                 "libhidlbase",
                 "android.hardware.security.rkp-V3-ndk",

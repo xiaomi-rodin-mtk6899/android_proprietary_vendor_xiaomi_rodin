@@ -1059,6 +1059,7 @@ PRODUCT_PACKAGES += \
     APUWareUtilsAidlServer \
     android.hardware.audio.core-impl-mediatek \
     android.hardware.bluetooth.audio-impl-mediatek \
+    android.hardware.security.keymint-V3-ndk-v36 \
     c2.dolby.client \
     c2.dolby.hevc.dec \
     c2.dolby.hevc.sec.dec \
