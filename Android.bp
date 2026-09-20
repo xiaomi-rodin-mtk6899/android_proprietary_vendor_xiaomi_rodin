@@ -11783,6 +11783,35 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libwifi-hal-mtk",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libwifi-hal-mtk.so",
+            ],
+            shared_libs: [
+                "libbase",
+                "libcutils",
+                "liblog",
+                "libnl",
+                "libutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libwpfa",
     owner: "xiaomi",
     strip: {
@@ -26537,31 +26566,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vendor.mediatek.hardware.audio-V1-ndk",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/vendor.mediatek.hardware.audio-V1-ndk.so",
-            ],
-            shared_libs: [
-                "libbinder_ndk",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "vendor.mediatek.hardware.bluetooth.audio-V1-ndk",
     owner: "xiaomi",
     strip: {
@@ -35775,15 +35779,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "arm.mali.platform-mediatek.xml",
-    owner: "xiaomi",
-    src: "proprietary/vendor/etc/vintf/manifest/arm.mali.platform-mediatek.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "bluetooth_audio_mtk.xml",
     owner: "xiaomi",
     src: "proprietary/vendor/etc/vintf/manifest/bluetooth_audio_mtk.xml",
@@ -36213,14 +36208,6 @@ cc_prebuilt_binary {
         none: true,
     },
     prefer: true,
-    soc_specific: true,
-}
-
-sh_binary {
-    name: "chipinfo",
-    owner: "xiaomi",
-    src: "proprietary/vendor/bin/chipinfo",
-    filename: "chipinfo",
     soc_specific: true,
 }
 
@@ -36707,34 +36694,6 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "android.hardware.graphics.allocator-V2-ndk",
                 "android.hardware.graphics.allocator-V2-mediatek",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    relative_install_path: "hw/mt6899",
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "arm.mali.platform-service.mediatek.mt6899",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/hw/mt6899/arm.mali.platform-service.mediatek.mt6899",
-            ],
-            shared_libs: [
-                "arm.mali.platform-V2-ndk",
-                "libbase",
-                "libbinder_ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -37671,37 +37630,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "thermal_core",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/thermal_core",
-            ],
-            shared_libs: [
-                "libcutils",
-                "libutils",
-                "liblog",
-                "libifcutils_mtk",
-                "libmipc",
-                "libmtkproperty",
-                "libaedv",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "volte_clientapi_ua",
     owner: "xiaomi",
     target: {
@@ -37722,33 +37650,6 @@ cc_prebuilt_binary {
                 "libhardware_legacy",
                 "libc++",
                 "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "wlan_assistant",
-    owner: "xiaomi",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/wlan_assistant",
-            ],
-            shared_libs: [
-                "libc",
-                "liblog",
-                "libcutils",
-                "libnl",
-                "libc++",
                 "libm",
                 "libdl",
             ],
@@ -38665,13 +38566,6 @@ install_symlink {
     soc_specific: true,
     installed_location: "bin/hw/android.hardware.graphics.allocator-V2-service-mediatek",
     symlink_target: "/vendor/bin/hw/mt6899/android.hardware.graphics.allocator-V2-service-mediatek.mt6899",
-}
-
-install_symlink {
-    name: "vendor_bin_hw_arm_mali_platform-service_mediatek",
-    soc_specific: true,
-    installed_location: "bin/hw/arm.mali.platform-service.mediatek",
-    symlink_target: "/vendor/bin/hw/mt6899/arm.mali.platform-service.mediatek.mt6899",
 }
 
 install_symlink {

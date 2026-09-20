@@ -750,9 +750,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.security.keymint.mitee@3.0-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/android.hardware.tetheroffload-V1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.tetheroffload-V1-service.rc \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/init/arm.mali.platform-mediatek.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/arm.mali.platform-mediatek.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/camerahalserver.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/camerahalserver.rc \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/init/chipinfo_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/chipinfo_init.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/dms-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/dms-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/fuelgauged_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_init.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/fuelgauged_nvram_init.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/fuelgauged_nvram_init.rc \
@@ -764,7 +762,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.connfem.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.connfem.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.gps_pwr.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_pwr.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.gps_scp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.gps_scp.rc \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.thermal_core.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.thermal_core.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.vtservice_aidl.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vtservice_aidl.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/init.wlan_drv.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.wlan_drv.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/libxiaomi_mtkril.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/libxiaomi_mtkril.rc \
@@ -787,7 +784,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.batteryantiaging-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.batteryantiaging-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/xiaomi/rodin/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
@@ -902,25 +898,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/rodin/proprietary/vendor/etc/smartpa_param_fs/preset_voip.bin:$(TARGET_COPY_OUT_VENDOR)/etc/smartpa_param_fs/preset_voip.bin \
     vendor/xiaomi/rodin/proprietary/vendor/etc/spk_cal_silence.wav:$(TARGET_COPY_OUT_VENDOR)/etc/spk_cal_silence.wav \
     vendor/xiaomi/rodin/proprietary/vendor/etc/thermal-map.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-map.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/disable_skin_control.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_skin_control.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/disable_thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_thermal.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/disable_thermal_temp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_thermal_temp.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/disable_throttling.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/disable_throttling.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/fix_ttj_85.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/fix_ttj_85.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/fix_ttj_95.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/fix_ttj_95.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_evb.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_evb.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_hqa_normal.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_hqa_normal.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_hqa_perf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_hqa_perf.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_mtbf.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_mtbf.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_00.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_00.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_01.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_01.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_02.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_02.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_03.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_03.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_08.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_08.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_09.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_09.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermal/thermal_policy_10.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal/thermal_policy_10.conf \
-    vendor/xiaomi/rodin/proprietary/vendor/etc/thermalbreakboostconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/thermalbreakboostconfig.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
     vendor/xiaomi/rodin/proprietary/vendor/etc/vendor-apns-conf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/vendor-apns-conf.xml \
     vendor/xiaomi/rodin/proprietary/vendor/etc/virtual-spn-conf-by-efgid1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/virtual-spn-conf-by-efgid1.xml \
@@ -1436,6 +1413,7 @@ PRODUCT_PACKAGES += \
     libvow_ap_test_vaca_nn \
     libvow_comp_test \
     libvpu5 \
+    libwifi-hal-mtk \
     libwpfa \
     libwvkeybox \
     libxiaomi_mtkril \
@@ -1851,7 +1829,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.apusys-V5-ndk_vendor \
     vendor.mediatek.hardware.apuware.utils-V1-ndk_vendor \
     vendor.mediatek.hardware.apuware.utils@2.0_vendor \
-    vendor.mediatek.hardware.audio-V1-ndk \
     vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
     vendor.mediatek.hardware.bluetooth.audio@2.1 \
     vendor.mediatek.hardware.bluetooth.audio@2.2 \
@@ -2168,7 +2145,6 @@ PRODUCT_PACKAGES += \
     android.hardware.security.secureclock-service.mitee.xml \
     android.hardware.security.sharedsecret-service.mitee.xml \
     android.hardware.tetheroffload-V1-service.xml \
-    arm.mali.platform-mediatek.xml \
     bluetooth_audio_mtk.xml \
     dms-service.xml \
     gnss-aosp-mtk.xml \
@@ -2204,7 +2180,6 @@ PRODUCT_PACKAGES += \
     cameratest \
     ccci_mdinit \
     ccci_rpcd \
-    chipinfo \
     conninfra_loader \
     displayfeature \
     fuelgauged \
@@ -2219,7 +2194,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2-service-mediatek \
     android.hardware.security.keymint@3.0-service.mitee \
     android.hardware.graphics.allocator-V2-service-mediatek.mt6899 \
-    arm.mali.platform-service.mediatek.mt6899 \
     camerahalserver \
     mtkfusionrild \
     tetheroffloadservice \
@@ -2247,9 +2221,7 @@ PRODUCT_PACKAGES += \
     muxreport \
     nvram_daemon \
     tee-supplicant \
-    thermal_core \
     volte_clientapi_ua \
-    wlan_assistant \
     climax_tfa9873 \
     android.hardware.audio.parameter_parser.service \
     spkcal \
@@ -2315,7 +2287,6 @@ PRODUCT_PACKAGES += \
     odm_bin_crossbuild_DataSet_SQLiteModule_db_tuning_DB_aov_default_sensor_ISP_param_db \
     odm_bin_crossbuild_DataSet_SQLiteModule_db_tuning_DB_aov_ISP_info_db \
     vendor_bin_hw_android_hardware_graphics_allocator-V2-service-mediatek \
-    vendor_bin_hw_arm_mali_platform-service_mediatek \
     vendor_bin_hw_camerahalserver \
     vendor_etc_camera_mt6899_gma_custom_xml \
     vendor_lib64_egl_libGLES_mali_so \
