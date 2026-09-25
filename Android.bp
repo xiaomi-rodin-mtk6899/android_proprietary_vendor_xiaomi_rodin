@@ -6,6 +6,7 @@ soong_namespace {
     imports: [
         "device/xiaomi/rodin",
         "hardware/mediatek",
+        "hardware/mediatek/libion_mtk",
         "hardware/mediatek/libmtkperf_client",
         "hardware/xiaomi",
     ],
@@ -6740,61 +6741,6 @@ cc_prebuilt_library_shared {
                 "libutils",
                 "libladder",
                 "libaedv",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libion_mtk",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libion_mtk.so",
-            ],
-            shared_libs: [
-                "libion",
-                "liblog",
-                "libion_ulit",
-                "libcutils",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
-    name: "libion_ulit",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libion_ulit.so",
-            ],
-            shared_libs: [
-                "libutils",
-                "liblog",
-                "libladder",
                 "libc++",
                 "libc",
                 "libm",
